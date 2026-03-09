@@ -1,0 +1,6 @@
+{
+  "title": "Getting started",
+  "defaultOpen": true,
+  "pages": ["index", "quickstart", "authentication", "client-secret", "api-keys"]
+}
+

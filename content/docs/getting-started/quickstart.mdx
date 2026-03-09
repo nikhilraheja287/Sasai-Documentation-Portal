@@ -1,0 +1,30 @@
+---
+title: Quickstart
+description: Make your first authenticated Sasai API request from a secure backend service.
+---
+
+## Before you start
+
+- Create a project in the Sasai Dashboard.
+- Choose the correct environment: sandbox for testing, production for live traffic.
+- Keep all credentials in server-side environment variables.
+
+## Make your first request
+
+1. Generate an API key in the dashboard.
+2. Store it in an environment variable such as `SASAI_API_KEY`.
+3. Send it in the `Authorization` header from your backend.
+
+```bash
+curl https://api.sasai.com/v1/health \
+  -H "Authorization: Bearer $SASAI_API_KEY"
+```
+
+## Next steps
+
+<Cards>
+  <Card title="Authentication" href="/docs/getting-started/authentication" />
+  <Card title="API keys" href="/docs/getting-started/api-keys" />
+  <Card title="Integration guide" href="/docs/remitsense/integration-guide" />
+</Cards>
+

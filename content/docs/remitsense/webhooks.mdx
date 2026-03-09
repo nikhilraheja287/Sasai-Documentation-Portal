@@ -1,0 +1,18 @@
+---
+title: Webhooks
+description: Process event-driven updates from RemitSense reliably and securely.
+---
+
+## Webhook handling checklist
+
+1. Receive events on a dedicated backend endpoint.
+2. Verify authenticity before processing payloads.
+3. Return a success response quickly.
+4. Process business logic asynchronously when possible.
+
+## Reliability guidance
+
+- Support retries and deduplicate repeated deliveries.
+- Capture event IDs for observability and replay workflows.
+- Alert on repeated delivery failures or signature validation errors.
+

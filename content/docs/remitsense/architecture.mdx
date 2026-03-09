@@ -1,0 +1,17 @@
+---
+title: Architecture
+description: Align your system boundaries with how RemitSense expects clients, APIs, and events to interact.
+---
+
+## Recommended shape
+
+- Your frontend talks to your backend, not directly to Sasai secrets.
+- Your backend authenticates requests to Sasai APIs.
+- Your webhook consumer handles asynchronous product events.
+
+## Design notes
+
+- Keep credentials in a dedicated configuration layer.
+- Log request identifiers, not sensitive headers.
+- Isolate webhook verification and retry logic from business logic.
+

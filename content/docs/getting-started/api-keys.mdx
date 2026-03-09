@@ -1,0 +1,42 @@
+---
+title: API keys
+description: Create and use project-scoped API keys for secure server access to Sasai APIs.
+---
+
+API keys grant your server access to Sasai APIs for a specific project and environment.
+
+<Callout type="info" title="Server-side usage only">
+  API keys should only be used from trusted backend services, scheduled jobs, or private infrastructure.
+</Callout>
+
+## Creating API keys
+
+1. In the Sasai Dashboard, open your project.
+2. Go to **Developers -> API keys** or **Settings -> API keys**.
+3. Click **Create API key**.
+4. Copy the secret key immediately, because it may only be shown once.
+
+## Using API keys
+
+Send the secret key in the `Authorization` header:
+
+```bash
+curl https://api.sasai.com/v1/remitsense/transactions \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json"
+```
+
+## Best practices
+
+<Cards>
+  <Card title="Use environment variables" description="Store API keys in a managed secret store or deployment environment." />
+  <Card title="Separate environments" description="Use distinct keys for sandbox and production workloads." />
+  <Card title="Rotate keys regularly" description="Replace keys on a schedule and after access changes or exposure." />
+</Cards>
+
+## Common mistakes
+
+- Sending API keys from browser-based code
+- Reusing one key across every environment
+- Logging full credentials in request debugging output
+

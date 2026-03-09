@@ -1,0 +1,20 @@
+---
+title: Integration guide
+description: Plan the main integration steps for implementing RemitSense in your backend.
+---
+
+## Integration flow
+
+1. Provision sandbox credentials.
+2. Authenticate your backend with project secrets or API keys.
+3. Call RemitSense endpoints from trusted services only.
+4. Subscribe to webhook events for asynchronous updates.
+5. Promote validated flows to production credentials.
+
+## Implementation checklist
+
+- Separate sandbox and production configuration
+- Centralized secret storage
+- Retries with idempotent behavior where needed
+- Monitoring for webhook delivery and API errors
+

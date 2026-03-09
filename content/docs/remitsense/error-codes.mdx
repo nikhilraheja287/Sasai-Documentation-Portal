@@ -1,0 +1,18 @@
+---
+title: Error codes
+description: Handle API and delivery failures consistently across your integration.
+---
+
+## What to expect
+
+- Authentication errors when credentials are missing, invalid, or expired
+- Validation errors when required fields or formats are incorrect
+- Rate-limit or availability errors during transient platform conditions
+
+## Recommended handling
+
+1. Log the request context and response code.
+2. Retry only transient failures.
+3. Surface actionable messages to operators, not raw secrets or payloads.
+4. Escalate repeated failures with monitoring and alerting.
+

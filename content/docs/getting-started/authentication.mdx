@@ -1,0 +1,25 @@
+---
+title: Authentication
+description: Understand how Sasai authenticates server requests and how to protect credentials.
+---
+
+## Authentication model
+
+Sasai APIs are designed for secure server-to-server access. Your backend sends project credentials with each request and keeps secrets out of client applications.
+
+## Use the right credential for the right job
+
+- Use a client identifier when configuring your integration.
+- Use a client secret only on trusted backend services.
+- Use API keys for project-scoped server access.
+
+<Callout type="warning" title="Do not expose secrets in frontend code">
+  Never embed API keys or client secrets in web apps, mobile apps, or public repositories.
+</Callout>
+
+## Operational guidance
+
+- Store secrets in your deployment platform or vault.
+- Rotate credentials regularly and after team changes.
+- Maintain separate credentials for sandbox and production projects.
+

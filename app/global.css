@@ -1,0 +1,302 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+@import 'fumadocs-openapi/css/preset.css';
+
+:root {
+  --sasai-brand: #1473e6;
+  --sasai-brand-soft: #eff6ff;
+  --sasai-border: rgba(15, 23, 42, 0.08);
+  --sasai-text: #0f172a;
+  --sasai-muted: #475569;
+  --sasai-surface: rgba(255, 255, 255, 0.88);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(20, 115, 230, 0.08), transparent 28%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 32%, #f8fafc 100%);
+  color: var(--sasai-text);
+}
+
+.sasai-docs-layout {
+  --sasai-top-nav-height: 4.5rem;
+  --fd-docs-row-1: var(--sasai-top-nav-height);
+  width: min(100%, 1440px);
+  margin-inline: auto;
+}
+
+.sasai-docs-shell {
+  --sasai-top-nav-height: 4.5rem;
+}
+
+.sasai-docs-top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  height: var(--sasai-top-nav-height);
+  border-bottom: 1px solid var(--sasai-border);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+}
+
+.sasai-docs-top-nav-inner {
+  width: min(100%, 1440px);
+  height: 100%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-inline: 1.25rem;
+}
+
+.sasai-docs-top-nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.sasai-docs-top-nav-links {
+  display: none;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.sasai-docs-top-nav-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--sasai-muted);
+  transition: color 150ms ease;
+}
+
+.sasai-docs-top-nav-link:hover {
+  color: var(--sasai-text);
+}
+
+.sasai-docs-top-nav-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.sasai-docs-sidebar {
+  background: rgba(248, 250, 252, 0.72);
+  backdrop-filter: blur(14px);
+}
+
+.sasai-sidebar-card {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(20, 115, 230, 0.16);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(239, 246, 255, 0.88));
+  box-shadow: 0 18px 42px -28px rgba(15, 23, 42, 0.45);
+}
+
+.sasai-sidebar-card-label,
+.sasai-toc-card-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--sasai-brand);
+}
+
+.sasai-sidebar-card-text,
+.sasai-toc-card-text {
+  margin: 0.35rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--sasai-muted);
+}
+
+.sasai-docs-page {
+  max-width: 840px;
+}
+
+.sasai-docs-hero {
+  margin-bottom: 2rem;
+  padding: 1.5rem 1.5rem 1.25rem;
+  border: 1px solid var(--sasai-border);
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.9));
+  box-shadow: 0 28px 65px -42px rgba(15, 23, 42, 0.48);
+}
+
+.sasai-page-description {
+  margin-top: 0.75rem;
+  max-width: 64ch;
+  color: var(--sasai-muted);
+  font-size: 1.05rem;
+}
+
+.sasai-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+  margin-bottom: 0.9rem;
+  font-size: 0.85rem;
+}
+
+.sasai-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.sasai-breadcrumb-link,
+.sasai-breadcrumb-current {
+  color: var(--sasai-brand);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.sasai-breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.sasai-breadcrumb-current {
+  color: var(--sasai-text);
+}
+
+.sasai-breadcrumb-separator {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.sasai-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--sasai-border);
+}
+
+.sasai-toc-card {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(20, 115, 230, 0.12);
+  border-radius: 1rem;
+  background: var(--sasai-brand-soft);
+}
+
+.sasai-home {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 5rem 1.5rem 4rem;
+}
+
+.sasai-home-hero {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.sasai-home-kicker {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(20, 115, 230, 0.16);
+  border-radius: 999px;
+  background: rgba(239, 246, 255, 0.92);
+  color: var(--sasai-brand);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.sasai-home-title {
+  margin-top: 1rem;
+  max-width: 12ch;
+  font-size: clamp(2.6rem, 5vw, 4.75rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+}
+
+.sasai-home-copy {
+  max-width: 62ch;
+  margin-top: 1rem;
+  color: var(--sasai-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.sasai-home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.sasai-home-primary,
+.sasai-home-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+.sasai-home-primary {
+  background: var(--sasai-brand);
+  color: white;
+  box-shadow: 0 18px 36px -24px rgba(20, 115, 230, 0.75);
+}
+
+.sasai-home-secondary {
+  border: 1px solid var(--sasai-border);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--sasai-text);
+}
+
+.sasai-home-primary:hover,
+.sasai-home-secondary:hover {
+  transform: translateY(-1px);
+}
+
+.sasai-home-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.sasai-home-card {
+  padding: 1.25rem;
+  border: 1px solid var(--sasai-border);
+  border-radius: 1.25rem;
+  background: var(--sasai-surface);
+  box-shadow: 0 24px 48px -38px rgba(15, 23, 42, 0.42);
+}
+
+.sasai-home-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sasai-home-card-copy {
+  margin-top: 0.5rem;
+  color: var(--sasai-muted);
+  line-height: 1.65;
+}
+
+@media (min-width: 768px) {
+  .sasai-docs-top-nav-links {
+    display: flex;
+  }
+
+  .sasai-home-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
