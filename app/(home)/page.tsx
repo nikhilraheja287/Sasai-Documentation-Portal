@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '@/app/images/logo.png';
 
 const productCards = [
   {
@@ -29,7 +31,10 @@ export default function HomePage() {
     <main className="sasai-home">
       <section className="sasai-home-hero">
         <div>
-          {/* <span className="sasai-home-kicker">Sasai Docs</span> */}
+          <div className="sasai-home-brand">
+            <Image src={logo} alt="Sasai logo" className="h-10 w-auto" priority />
+            <span className="sasai-home-brand-text">Sasai Docs</span>
+          </div>
           <h1 className="sasai-home-title sasai-home-title-products">Sasai Products</h1>
           <p className="sasai-home-copy">
             Sasai offers a suite of developer products for remittances, insurance, credit, and

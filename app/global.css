@@ -251,6 +251,19 @@ body {
   align-items: center;
 }
 
+.sasai-home-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.sasai-home-brand-text {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #111827;
+}
+
 .sasai-home-kicker {
   display: inline-flex;
   align-items: center;

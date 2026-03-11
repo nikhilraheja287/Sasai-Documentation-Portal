@@ -1,9 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { AuthNav } from '@/components/auth-nav';
+import logo from '@/app/images/logo.png';
 
 export function DocsTopNav() {
   const pathname = usePathname();
@@ -33,9 +35,7 @@ export function DocsTopNav() {
         ) : null}
 
         <Link href="/docs" className="sasai-docs-top-nav-brand">
-          <span className="flex size-9 items-center justify-center rounded-xl bg-[#1473e6] text-sm font-semibold text-white shadow-sm">
-            S
-          </span>
+          <Image src={logo} alt="Sasai logo" className="h-10 w-auto" priority />
           <span className="flex flex-col leading-none">
             <span className="text-sm font-semibold text-slate-950">Sasai Docs</span>
             <span className="text-xs font-medium text-slate-500">{productLabel}</span>
