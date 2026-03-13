@@ -6,6 +6,15 @@ const withMDX = createMDX();
 const config = {
   serverExternalPackages: ['@takumi-rs/image-response'],
   reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'sandbox-cdn.azureedge.net',
+        pathname: '/strapi-service-sandbox-new/sasai-branding/**',
+      },
+    ],
+  },
   async rewrites() {
     return [
       {
