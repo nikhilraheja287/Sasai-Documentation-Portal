@@ -363,14 +363,14 @@ export function AISearchPanel() {
       <Presence present={open}>
         <div
           data-state={open ? 'open' : 'closed'}
-          className="fixed inset-0 z-30 backdrop-blur-xs bg-fd-overlay data-[state=open]:animate-fd-fade-in data-[state=closed]:animate-fd-fade-out lg:hidden"
+          className="fixed inset-0 z-50 backdrop-blur-xs bg-fd-overlay data-[state=open]:animate-fd-fade-in data-[state=closed]:animate-fd-fade-out lg:hidden"
           onClick={() => setOpen(false)}
         />
       </Presence>
       <Presence present={open}>
         <div
           className={cn(
-            'overflow-hidden z-30 bg-fd-card text-fd-card-foreground [--ai-chat-width:400px] 2xl:[--ai-chat-width:460px]',
+            'overflow-hidden z-50 bg-fd-card text-fd-card-foreground [--ai-chat-width:400px] 2xl:[--ai-chat-width:460px]',
             'max-lg:fixed max-lg:inset-x-2 max-lg:top-4 max-lg:border max-lg:rounded-2xl max-lg:shadow-xl',
             'lg:fixed lg:end-0 lg:top-0 lg:h-dvh lg:border-s lg:shadow-xl',
             open
